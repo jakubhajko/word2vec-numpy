@@ -19,6 +19,7 @@ cd <repo-folder>
 
 # 2. Sync dependencies and create environment automatically
 uv sync
+uv pip install -e .
 
 # 3. Activate the environment
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
