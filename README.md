@@ -44,7 +44,8 @@ Once installed, the easiest way to test the implementation is via the provided s
 
 ```bash
 # Run the full pipeline with visualization (PCA 3D plot of embeddings)
-python scripts/run_demo.py --size medium --epochs 3
+# Recommended script
+python scripts/run_demo.py --size medium --epochs 3 
 
 # Run a stripped-down, bare-bones training loop
 python scripts/simple_train.py
@@ -128,6 +129,20 @@ Using the chain rule, we distribute these errors back to the respective embeddin
 
 *(These formulas are exactly what powers the matrix multiplications and `einsum` operations inside `model.py`'s `backward()` method).*
 
+---
+
+
+## 💡 Important Note for JetBrains: A Happy Accident
+
+Before you review this Word2Vec implementation, I have a brief confession. When I first clicked "apply" for the **Hallucination Detection** internship project, I completely misunderstood the process. I thought the *project description* itself was the screening assignment!
+
+Without realizing the actual 7-day timer hadn't even started, I spent three full days building out a solution for the actual internship project. I read the referenced paper on geometric methods, successfully replicated the described pipeline, and reproduced the results on the HaluEval reference dataset. 
+
+By the time I realized my mistake (in mild horror) and found this Word2Vec task, I had already built a highly modular pipeline for the hallucination project—complete with an extensible architecture for adding new datasets and a configurable component for finding the optimal classification threshold. 
+
+I thoroughly enjoyed building this pure-NumPy Word2Vec implementation, but since I already did the work, I wanted to share my (accidental) head start on the actual project.
+
+👉 **[Link to my Hallucination Detection Pipeline](https://github.com/jakubhajko/rag-hallucination-detection)**
 ---
 
 ## 🌍 Small World
